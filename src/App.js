@@ -13,7 +13,7 @@ export default class App extends Component {
 
         this.state = {
             document: "",
-            mask: localStorage.getItem('mask') === 'true' ? true : false 
+            mask: localStorage.getItem('mask') === 'true' ? true : false
         };
     }
 
@@ -27,25 +27,26 @@ export default class App extends Component {
 
     createCNPJ(e) {
         e.preventDefault();
-        
+
         this.setState({ document: helper.gerarCNPJ(this.state.mask) });
 
         this.copy(e)
     }
 
-    useMask(e){
-       
+    useMask(e) {
+
         localStorage.setItem('mask', this.refs.mask.checked);
-        this.setState({ mask: this.refs.mask.checked} );
+        this.setState({ mask: this.refs.mask.checked });
     }
 
-    copy(e){
+    copy(e) {
         this.refs.input.select();
         document.execCommand('copy');
     }
 
-    componentDidUpdate(){
-       this.copy()
+    componentDidUpdate() {
+        this.refs.input.value = this.state.document
+        this.copy();
     }
 
     render() {
@@ -53,18 +54,18 @@ export default class App extends Component {
             <div className="App">
 
                 <div className="btn-selector">
-                    <button className="btn-cpf" onClick={this.createCPF}>CPF</button>
-                    <button className="btn-cnpj" onClick={this.createCNPJ}>CNPJ</button>
+                    <button className="btn-cpf" id="btn-cpf" onClick={this.createCPF}>CPF</button>
+                    <button className="btn-cnpj" id="btn-cnpj" onClick={this.createCNPJ}>CNPJ</button>
                 </div>
-                
+
                 <div className="mask">
-                    <input type="checkbox" ref="mask" defaultChecked={this.state.mask} onClick={this.useMask}/>
+                    <input type="checkbox" ref="mask" defaultChecked={this.state.mask} onClick={this.useMask} />
                     <span>Usar máscara</span>
                 </div>
 
                 <div className="input-result">
-                    <input type="text" ref="input" defaultValue={this.state.document} onClick={this.copy}/>
-                    <span style={{visibility: this.state.document ? 'visible' : 'hidden'}}>Copiado!</span>
+                    <input type="text" ref="input" defaultValue={this.state.document} onClick={this.copy} />
+                    <span style={{ visibility: this.state.document ? 'visible' : 'hidden' }}>Copiado!</span>
                 </div>
 
             </div>
