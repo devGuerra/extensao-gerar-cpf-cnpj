@@ -45,8 +45,7 @@ export default class App extends Component {
     }
 
     componentDidUpdate(){
-
-        document.execCommand('copy');
+       this.copy()
     }
 
     render() {
