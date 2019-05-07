@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import "../src/css/style.css";
-import helper from '../src/Helpers/geraCPF'
+import "../css/style.css";
+import helper from '../Helpers/createCpf'
+import create from '../Helpers/createCreditCard'
 
-export default class App extends Component {
+export default class GenerateCpf extends Component {
     constructor(props) {
         super(props);
 
@@ -27,7 +28,7 @@ export default class App extends Component {
 
     createCNPJ(e) {
         e.preventDefault();
-
+        console.log(create.visa())
         this.setState({ document: helper.gerarCNPJ(this.state.mask) });
 
         this.copy(e)
