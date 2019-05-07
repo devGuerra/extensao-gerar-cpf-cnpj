@@ -1,19 +1,21 @@
-var helper = {
-    random: function random(n) {
+class create  {
+    random(n) {
         return Math.round(Math.random() * n);
-    },
-    mod: function mod(dividend, divisor) {
+    }
+    mod(dividend, divisor) {
         return Math.round(dividend - (Math.floor(dividend / divisor) * divisor));
-    },
+    }
 
-    sumNumbers: function sumNumbers(numbers) {
+    sumNumbers(numbers) {
         return numbers.slice().reverse().reduce(function (a, b, i) {
             return a + (b * (i + 2));
         }, 0);
-    },
-    defaultMask: 'xxx.xxx.xxx-xx',
-    defaultPlaceholder: 'x',
-    gerarCPF: function (mask, placeholder) {
+    }
+
+    gerarCPF(mask, placeholder) {
+
+        var defaultMask= 'xxx.xxx.xxx-xx'
+        var defaultPlaceholder= 'x'
         
         var numbers = [];
         var last;
@@ -36,12 +38,12 @@ var helper = {
         result = numbers.join('');
 
         if (typeof mask === 'boolean' && mask) {
-            mask = this.defaultMask;
+            mask = defaultMask;
         }
 
         if (mask && mask.length) {
             if (typeof placeholder === 'undefined') {
-                placeholder = this.defaultPlaceholder;
+                placeholder = defaultPlaceholder;
             }
 
             if (mask.match(new RegExp(placeholder, 'g')).length < 11) {
@@ -59,8 +61,9 @@ var helper = {
         }
 
         return result;
-    },
-    gerarCNPJ: function( comPontos) {
+    }
+
+    gerarCNPJ( comPontos) {
 
         var cnpj = '';
 
@@ -96,10 +99,10 @@ var helper = {
     
         return cnpj;
     
-    },
-    generateRandomString: function(num){
+    }
+    generateRandomString(num){
         return Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, num);
     }
 };
 
-export default helper
+export default new create()
