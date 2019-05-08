@@ -7,20 +7,24 @@
   outline: 0;
 }
 *:focus {  outline: none;}
+input:hover { cursor: pointer; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  background-color: #1f2739;
-  background-color: #1659bf;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 180px;
+  
+}
+
+#root {
+  background-color: #1659bf;
+  color: #fff;
+  height: 250px;
   width: 250px;
 }
-input:hover { cursor: pointer; }
+
 
 button {
   background-color: #0f4098;
@@ -28,21 +32,51 @@ button {
   border-radius: 5px;
   color: #fff;
   height: 32px;
+  width: 56px;
   margin: 0 5px;
   font-weight: 700;
 }
 button:hover {
   cursor: pointer;
-  border: 1px #ffffff8a solid;
+  /* border: 1px #ffffff8a solid; */
 }
 
-.App div {
-  margin: 10px 0 ;
+body .main{
+  height: 250px;
+}
+
+body .menu {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+body .cpf {
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .cpf div{
+  margin-top: 5px
+}
+body .card {
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .card label{
+  font-size: 12px
+}
+body .card button{
+  width: 45px;
 }
 
 body .btn-selector button {
   height: 32px;
-  width: 56px;
 }
 
 body .mask {
@@ -55,8 +89,10 @@ body .mask {
 body .input-result {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: center
 }
+
 body .input-result input {
   border: none;
   text-align: center;
@@ -66,13 +102,16 @@ body .input-result input {
   border-radius: 5px;
   width: 90%;
 }
-body .input-result span {
-  background-color: #444a538a;
-  color: #fff;
+body .copied {
+  display: flex;
+  justify-content: center
+}
+body .copied span{
+  background-color: #33ff00b5;
+  color: #000;
   border: none;
   width: 40%;
   border-radius: 5px;
   font-size: 10px;
-  margin-top: 5px;
   padding: 4px 2px
 }
