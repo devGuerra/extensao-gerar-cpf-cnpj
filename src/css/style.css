@@ -6,8 +6,12 @@
   box-sizing: border-box;
   outline: 0;
 }
-*:focus {  outline: none;}
-input:hover { cursor: pointer; }
+*:focus {
+  outline: none;
+}
+input:hover {
+  cursor: pointer;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +19,6 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  
 }
 
 #root {
@@ -25,32 +28,38 @@ body {
   width: 250px;
 }
 
-
 button {
-  background-color: #0f4098;
   border: none;
   border-radius: 5px;
   color: #fff;
-  height: 32px;
-  width: 56px;
-  margin: 0 5px;
   font-weight: 700;
 }
 button:hover {
   cursor: pointer;
-  /* border: 1px #ffffff8a solid; */
 }
 
-body .main{
+body .main {
   height: 250px;
 }
 
 body .menu {
+  width: 100%;
   height: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+body .menu button {
+  width: 48%;
+  height: 80%;
+  font-size: 12px;
+  background-color: #1659bf;
+  border: #fff 1px solid;
+}
+body .menu button:hover {
   background-color: #fff;
+  color: #1659bf;
 }
 
 body .cpf {
@@ -58,21 +67,71 @@ body .cpf {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 5px;
 }
-body .cpf div{
-  margin-top: 5px
+body .cpf div {
+  margin-top: 5px;
 }
+body .cpf button {
+  background-color: #0f4098;
+  height: 32px;
+  width: 56px;
+  margin: 0 5px;
+}
+body .cpf button:hover {
+  background-color: #fff;
+  color: #0f4098;
+}
+
 body .card {
   height: 210px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-body .card label{
-  font-size: 12px
+body .card div:first-child {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
 }
-body .card button{
-  width: 45px;
+body .card label {
+  font-size: 12px;
+  margin: 2px 0;
+}
+body .card button {
+  width: 48px;
+  height: 32px;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #ffffff6b;
+  opacity: 0.5;
+}
+body .card .selected {
+  opacity: 1;
+  border: none;
+  -webkit-box-shadow: 0px 0px 6px 2px #000000;
+-moz-box-shadow: 0px 0px 6px 2px #000000;
+box-shadow: 0px 0px 6px 2px #000000;
+}
+
+body .card button:hover {
+  color: #323639;
+  opacity: 1;
+}
+
+.amex {
+  background-image: url(../images/amex.png);
+}
+.visa {
+  background-image: url(../images/visa.png);
+}
+.master {
+  background-image: url(../images/master.png);
+}
+.discover {
+  background-image: url(../images/discover.png);
 }
 
 body .btn-selector button {
@@ -90,28 +149,28 @@ body .input-result {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 body .input-result input {
   border: none;
   text-align: center;
-  caret-color:transparent;
-  font-weight: 700;  
-  height: 32px;
+  caret-color: transparent;
+  font-weight: 700;
+  height: 28px;
   border-radius: 5px;
   width: 90%;
 }
 body .copied {
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
-body .copied span{
+body .copied span {
   background-color: #33ff00b5;
   color: #000;
   border: none;
   width: 40%;
   border-radius: 5px;
   font-size: 10px;
-  padding: 4px 2px
+  padding: 4px 2px;
 }
