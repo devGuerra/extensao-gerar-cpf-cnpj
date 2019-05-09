@@ -1,7 +1,7 @@
 {
-  "short_name": "Gerador de CPF e CPNJ",
-  "name": "Gerador de CPF e CNPJ",
-  "description": "Extensão usada para gerar dados de CPF e CNPJ de forma fácil e rápida. O uso das informações de responsabilidade do usuário.",
+  "short_name": "Gerador de CPF, CPNJ e Cartão",
+  "name": "Gerador de CPF, CPNJ e Cartão",
+  "description": "Use para gerar CPF, CNPJ e Cartão de Credito de forma fácil e rápida. O uso das informações são de responsabilidade do usuário.",
   "content_security_policy" : "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "manifest_version": 2,
   "icons": {
@@ -10,10 +10,10 @@
 
   "browser_action": {
     "default_popup": "index.html",
-    "default_title": "Gerador de CPF e CNPJ"
+    "default_title": "Gerador de CPF, CPNJ e Cartão"
   },
   "permissions": [
     "activeTab"
   ],
-  "version": "1.1.6"
+  "version": "1.2"
 }
