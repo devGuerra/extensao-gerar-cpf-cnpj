@@ -146,7 +146,7 @@ export default class GenerateCpf extends Component {
 
         const button = this.state.flags.map((flags, index) => {
 
-           return  <button key={index} className={flags === this.state.type ? `${flags} selected` : flags} value={flags} onClick={this.newCard} />
+           return  <button id={`select_${flags}`} key={index} className={flags === this.state.type ? `${flags} selected` : flags} value={flags} onClick={this.newCard} />
             
         });
 
@@ -154,8 +154,8 @@ export default class GenerateCpf extends Component {
             <div className="main">
 
                 <div className="menu">
-                    <button value='cpf' onClick={this.setHash}>Dados Pessoais</button>
-                    <button value='card'  onClick={this.setHash}>Cartão de credito</button>
+                    <button id='menu_cpf' value='cpf' onClick={this.setHash}>Dados Pessoais</button>
+                    <button id='menu_card' value='card'  onClick={this.setHash}>Cartão de credito</button>
                 </div>
                 {
                     this.state.hash === 'cpf' ?
@@ -163,21 +163,21 @@ export default class GenerateCpf extends Component {
                         <div className="cpf">
 
                             <div className="input-result">
-                                <input type="text" ref="input" defaultValue={this.state.document} onClick={this.copy} />
+                                <input id='input_cpf' type="text" ref="input" defaultValue={this.state.document} onClick={this.copy} />
 
                             </div>
 
                             <div className="copied">
-                                <span style={{ display: this.state.document ? 'block' : 'none' }}>Copiado</span>
+                                <span id='copied' style={{ display: this.state.document ? 'block' : 'none' }}>Copiado</span>
                             </div>
                             <div className="mask">
-                                <input type="checkbox" ref="mask" defaultChecked={this.state.mask} onClick={this.useMask} />
-                                <span>Usar máscara</span>
+                                <input id='box-mask' type="checkbox" ref="mask" defaultChecked={this.state.mask} onClick={this.useMask} />
+                                <span id='text-mask'>Usar máscara</span>
                             </div>
 
                             <div className="btn-selector">
-                                <button className="btn-cpf" id="btn-cpf" onClick={this.createCPF}>CPF</button>
-                                <button className="btn-cnpj" id="btn-cnpj" onClick={this.createCNPJ}>CNPJ</button>
+                                <button id="btn-cpf" className="btn-cpf" onClick={this.createCPF}>CPF</button>
+                                <button id="btn-cnpj" className="btn-cnpj" onClick={this.createCNPJ}>CNPJ</button>
                             </div>
 
 
@@ -193,15 +193,15 @@ export default class GenerateCpf extends Component {
                             <div>
                                 <div className='input-result' >
                                     <label>Cartão</label>
-                                    <input ref='cardNumber' defaultValue={this.state.number} onClick={this.copy}  />
+                                    <input id="input_card"  ref='cardNumber' defaultValue={this.state.number} onClick={this.copy}  />
                                 </div>
                                 <div className='input-result' >
                                     <label>Exp</label>
-                                    <input ref='cardDate'  defaultValue={this.state.expDate} onClick={this.copy} />
+                                    <input id="input_dateExp" ref='cardDate'  defaultValue={this.state.expDate} onClick={this.copy} />
                                 </div>
                                 <div className='input-result' >
                                     <label>Cvv</label>
-                                    <input ref='cardCvv'  defaultValue={this.state.cvv} onClick={this.copy} />
+                                    <input id="input_cvv" ref='cardCvv'  defaultValue={this.state.cvv} onClick={this.copy} />
                                 </div>
                             </div>
                         </div>
