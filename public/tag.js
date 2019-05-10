@@ -13,16 +13,23 @@ _gaq.push(['_trackPageview']);
     s.parentNode.insertBefore(ga, s);
 })();
 
-function trackButtonClick(e) {
-    console.log(e.target.id)
-    _gaq.push(['_trackEvent', e.target.id, 'clicked']);
-};
+// function trackButtonClick(e) {
+//     console.log(e.target.id)
+//     _gaq.push(['_trackEvent', e.target.id, 'clicked']);
+// };
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('button');
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener('click', trackButtonClick)
-    }
+
+    document.addEventListener('click', function(e) {
+        _gaq.push(['_trackEvent', e.target.id, 'clicked']);
+    })
+    
+
+
+    // var buttons = document.querySelectorAll('button');
+    // for (var i = 0; i < buttons.length; i++) {
+    //   buttons[i].addEventListener('click', trackButtonClick)
+    // }
 });
   
