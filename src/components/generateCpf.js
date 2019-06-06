@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import helper from '../Helpers/createCpf';
 import createCard from '../Helpers/createCard';
+import storage from '../Helpers/storage';
 import '../css/style.css';
 
 export default class GenerateCpf extends Component {
@@ -17,13 +18,13 @@ export default class GenerateCpf extends Component {
     this.cardSelected = this.cardSelected.bind(this);
 
     this.state = {
-      hash: localStorage.getItem('hash') || '',
+      hash: storage.get('hash'),
       document: '',
-      mask: Boolean(localStorage.getItem('mask')),
-      type: localStorage.getItem('type') || '',
-      number: localStorage.getItem('number') || '',
-      expDate: localStorage.getItem('exp') || '',
-      cvv: localStorage.getItem('cvv') || '',
+      mask: Boolean(storage.get('mask')),
+      type: storage.get('type'),
+      number: storage.get('number'),
+      expDate: storage.get('exp'),
+      cvv: storage.get('cvv'),
       flags: ['visa', 'master', 'amex', 'discover'],
     };
   }
@@ -81,7 +82,7 @@ export default class GenerateCpf extends Component {
   }
 
   useMask(e) {
-    localStorage.setItem('mask', this.refs.mask.checked);
+    storage.set('mask', this.refs.mask.checked);
     this.setState({ mask: this.refs.mask.checked });
   }
 
@@ -117,11 +118,11 @@ export default class GenerateCpf extends Component {
       this.refs.cardCvv.value = this.state.cvv;
     }
 
-    localStorage.setItem('hash', this.state.hash);
-    localStorage.setItem('type', this.state.type);
-    localStorage.setItem('number', this.state.number);
-    localStorage.setItem('exp', this.state.expDate);
-    localStorage.setItem('cvv', this.state.cvv);
+    storage.set('hash', this.state.hash);
+    storage.set('type', this.state.type);
+    storage.set('number', this.state.number);
+    storage.set('exp', this.state.expDate);
+    storage.set('cvv', this.state.cvv);
   }
 
   componentDidMount() {
