@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import helper from '../Helpers/createCpf';
 import createCard from '../Helpers/createCard';
 import storage from '../Helpers/storage';
+import log from '../Helpers/log';
 import '../css/style.css';
 
 export default class GenerateCpf extends Component {
@@ -45,7 +46,7 @@ export default class GenerateCpf extends Component {
     const { className } = e.target;
 
     if (className !== this.state.type) {
-      console.log(e.target);
+      log(e.target);
     }
   }
 
@@ -126,7 +127,7 @@ export default class GenerateCpf extends Component {
   }
 
   componentDidMount() {
-    console.log(this.state);
+    log(this.state);
   }
 
   render() {
