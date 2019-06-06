@@ -6,9 +6,11 @@
   box-sizing: border-box;
   outline: 0;
 }
+
 *:focus {
   outline: none;
 }
+
 input:hover {
   cursor: pointer;
 }
@@ -34,6 +36,7 @@ button {
   color: #fff;
   font-weight: 700;
 }
+
 button:hover {
   cursor: pointer;
 }
@@ -57,6 +60,7 @@ body .menu button {
   background-color: #1659bf;
   border: #fff 1px solid;
 }
+
 body .menu button:hover {
   background-color: #fff;
   color: #1659bf;
@@ -69,15 +73,18 @@ body .cpf {
   justify-content: center;
   border-radius: 5px;
 }
+
 body .cpf div {
   margin-top: 5px;
 }
+
 body .cpf button {
   background-color: #0f4098;
   height: 32px;
   width: 56px;
   margin: 0 5px;
 }
+
 body .cpf button:hover {
   background-color: #fff;
   color: #0f4098;
@@ -89,15 +96,18 @@ body .card {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 body .card div:first-child {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
 }
+
 body .card label {
   font-size: 12px;
   margin: 2px 0;
 }
+
 body .card button {
   width: 48px;
   height: 32px;
@@ -108,12 +118,13 @@ body .card button {
   border: 1px solid #ffffff6b;
   opacity: 0.5;
 }
+
 body .card .selected {
   opacity: 1;
   border: none;
   -webkit-box-shadow: 0px 0px 6px 2px #000000;
--moz-box-shadow: 0px 0px 6px 2px #000000;
-box-shadow: 0px 0px 6px 2px #000000;
+  -moz-box-shadow: 0px 0px 6px 2px #000000;
+  box-shadow: 0px 0px 6px 2px #000000;
 }
 
 body .card button:hover {
@@ -124,12 +135,15 @@ body .card button:hover {
 .amex {
   background-image: url(../images/amex.png);
 }
+
 .visa {
   background-image: url(../images/visa.png);
 }
+
 .master {
   background-image: url(../images/master.png);
 }
+
 .discover {
   background-image: url(../images/discover.png);
 }
@@ -161,10 +175,12 @@ body .input-result input {
   border-radius: 5px;
   width: 90%;
 }
+
 body .copied {
   display: flex;
   justify-content: center;
 }
+
 body .copied span {
   background-color: #33ff00b5;
   color: #000;
