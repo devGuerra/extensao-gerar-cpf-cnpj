@@ -17,10 +17,6 @@ export default class Cpf extends Component {
 
   }
 
-  componentDidMount(){
-    console.log(storage.get('mask'))
-  }
-
   createCPF(e) {
     e.preventDefault();
     this.setState({ document: helper.gerarCPF(this.state.mask) });
