@@ -26,9 +26,11 @@ body {
 #root {
   background-color: #1659bf;
   color: #fff;
-  height: 250px;
+  height: 275px;
   width: 250px;
 }
+
+
 
 button {
   border: none;
@@ -53,15 +55,15 @@ body .menu {
   justify-content: space-evenly;
 }
 
-body .menu button {
-  width: 48%;
-  height: 80%;
+body .menu a button {
+  width: 110px;
+  height: 30px;
   font-size: 12px;
   background-color: #1659bf;
   border: #fff 1px solid;
 }
 
-body .menu button:hover {
+body .menu a button:hover {
   background-color: #fff;
   color: #1659bf;
 }
@@ -72,6 +74,22 @@ body .cpf {
   flex-direction: column;
   justify-content: center;
   border-radius: 5px;
+  
+  /* animation-delay: 2s; */
+}
+.slides {
+  animation: slide-left 0.5s linear forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-240px);
+            transform: translateX(-240px);
+  }
 }
 
 body .cpf div {
@@ -189,4 +207,14 @@ body .copied span {
   border-radius: 5px;
   font-size: 10px;
   padding: 4px 2px;
+}
+
+
+body .footer {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+}
+body .footer a {
+  color: #fff
 }

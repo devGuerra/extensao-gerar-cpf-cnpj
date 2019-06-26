@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GenerateCpf from './components/generateCpf';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Cpf from './components/Cpf/index'
+import Card from './components/Card/index'
+import Header from './components/Header/index'
+import Footer from './components/Footer/index'
 
 ReactDOM.render(
-    <Cpf />, 
-    // <CreateCreditCard />,
+    <BrowserRouter>
+        <Header />
+        <Switch>
+            <Route path='/index.html' component={Cpf} />
+            <Route path='/card' component={Card} />
+        </Switch>
+        <Footer />
+    </BrowserRouter>,
     document.getElementById('root')
 );
