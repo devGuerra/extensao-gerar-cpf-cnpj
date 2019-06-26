@@ -7,6 +7,7 @@ export default class Card extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      type: storage.get('type'),
       number: storage.get('number'),
       expDate: storage.get('exp'),
       cvv: storage.get('cvv'),
@@ -79,7 +80,7 @@ export default class Card extends Component {
       );
     });
     return (
-      <div className="card">
+      <div className="card" id={this.props.show}>
         <div>{button}</div>
         <div>
           <div className="input-result">

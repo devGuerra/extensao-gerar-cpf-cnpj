@@ -55,7 +55,7 @@ body .menu {
   justify-content: space-evenly;
 }
 
-body .menu a button {
+body .menu button {
   width: 110px;
   height: 30px;
   font-size: 12px;
@@ -63,13 +63,18 @@ body .menu a button {
   border: #fff 1px solid;
 }
 
-body .menu a button:hover {
+body .menu button:hover {
   background-color: #fff;
   color: #1659bf;
 }
 
+body .slide-next {
+  display: inline-flex;
+}
+
 body .cpf {
   height: 210px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,18 +82,22 @@ body .cpf {
   
   /* animation-delay: 2s; */
 }
-.slides {
-  animation: slide-left 0.5s linear forwards;
+#cpf {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+#slide-cpf{
+  animation: slide-right 0.2s linear forwards;
 }
 
-@keyframes slide-left {
+@keyframes slide-right {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
   }
   100% {
-    -webkit-transform: translateX(-240px);
-            transform: translateX(-240px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -108,8 +117,29 @@ body .cpf button:hover {
   color: #0f4098;
 }
 
+#card {
+  -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+}
+#slide-card{
+  animation: slide-left 0.2s linear forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+  }
+}
+
+
 body .card {
   height: 210px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

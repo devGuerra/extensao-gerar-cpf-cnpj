@@ -39,7 +39,7 @@ export default class Cpf extends Component {
 
   render() {
     return (
-      <div className="cpf">
+      <div className="cpf" id={this.props.show}>
         <div className="input-result">
           <input type="text" name="dataInput" id="dataInput" defaultValue={this.state.document} onClick={(e) => this.copy(e)} />
         </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 
 // import { Container } from './styles';
 
@@ -22,8 +21,8 @@ export default class Header extends Component {
     render() {
         return (
                 <div className="menu">
-                    <Link to='/index.html'><button id="menu_cpf" value="cpf" onClick={this.setHash}>Dados Pessoais</button></Link>
-                    <Link to='/card'><button id="menu_card" value="card" onClick={this.setHash}>Cartão de credito</button></Link>                    
+                    <button id="menu_cpf" value="cpf" onClick={this.setHash}>Dados Pessoais</button>
+                    <button id="menu_card" value="card" onClick={this.setHash}>Cartão de credito</button>                  
                 </div>
         );
     }
