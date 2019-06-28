@@ -222,6 +222,10 @@ body .input-result input {
   height: 28px;
   border-radius: 5px;
   width: 90%;
+  background-image: url(https://cdn.4devs.com.br/imagens/copy.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 20px;
 }
 
 body .copied {

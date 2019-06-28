@@ -85,15 +85,15 @@ export default class Card extends Component {
         <div>
           <div className="input-result">
             <label>Cartão</label>
-            <input id="input_card" ref="cardNumber" defaultValue={this.state.number} onClick={(e) => this.copy(e)} />
+            <input id="input_card" ref="cardNumber" defaultValue={this.state.number} onClick={(e) => this.copy(e)} title="Copiar" />
           </div>
           <div className="input-result">
             <label>Exp</label>
-            <input id="input_dateExp" ref="cardDate" defaultValue={this.state.expDate} onClick={(e) => this.copy(e)}/>
+            <input id="input_dateExp" ref="cardDate" defaultValue={this.state.expDate} onClick={(e) => this.copy(e)} title="Copiar" />
           </div>
           <div className="input-result">
             <label>Cvv</label>
-            <input id="input_cvv" ref="cardCvv" defaultValue={this.state.cvv} onClick={(e) => this.copy(e)}/>
+            <input id="input_cvv" ref="cardCvv" defaultValue={this.state.cvv} onClick={(e) => this.copy(e)} title="Copiar" />
           </div>
         </div>
       </div>
