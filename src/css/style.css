@@ -161,9 +161,10 @@ body .card button {
   height: 32px;
   background-color: transparent;
   background-position: center;
-  background-size: contain;
+  background-size: 40px;
   background-repeat: no-repeat;
   border: 1px solid #ffffff6b;
+  background-color: #fff;
   opacity: 0.5;
 }
 
@@ -181,19 +182,19 @@ body .card button:hover {
 }
 
 .amex {
-  background-image: url(../images/amex.png);
+  background-image: url(../images/amex.svg);
 }
 
 .visa {
-  background-image: url(../images/visa.png);
+  background-image: url(../images/visa.svg);
 }
 
 .master {
-  background-image: url(../images/master.png);
+  background-image: url(../images/master.svg);
 }
 
 .discover {
-  background-image: url(../images/discover.png);
+  background-image: url(../images/discover.svg);
 }
 
 body .btn-selector button {
@@ -222,10 +223,11 @@ body .input-result input {
   height: 28px;
   border-radius: 5px;
   width: 90%;
-  background-image: url(https://cdn.4devs.com.br/imagens/copy.svg);
+  background-image: url(../images/copy.svg);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 20px;
+  cursor: pointer;
 }
 
 body .copied {
