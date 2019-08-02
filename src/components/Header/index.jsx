@@ -14,10 +14,6 @@ export default class Header extends Component {
         this.setState({ hash: e.target.value })
     }
 
-    componentDidUpdate = () => {
-        console.log(this.state)
-    }
-
     render() {
         return (
                 <div className="menu">

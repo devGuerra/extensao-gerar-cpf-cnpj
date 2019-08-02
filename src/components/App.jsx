@@ -32,8 +32,6 @@ export default class App extends Component {
 
   componentDidMount() {
 
-    console.log(this.state)
-
     const hash = storage.get('hash')
 
     this.setState({hash: hash})
