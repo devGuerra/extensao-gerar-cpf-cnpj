@@ -30,8 +30,6 @@ body {
   width: 250px;
 }
 
-
-
 button {
   border: none;
   border-radius: 5px;
@@ -79,14 +77,14 @@ body .cpf {
   flex-direction: column;
   justify-content: center;
   border-radius: 5px;
-  
+
   /* animation-delay: 2s; */
 }
 #cpf {
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
-#slide-cpf{
+#slide-cpf {
   animation: slide-right 0.2s linear forwards;
 }
 
@@ -119,9 +117,9 @@ body .cpf button:hover {
 
 #card {
   -webkit-transform: translateX(-250px);
-    transform: translateX(-250px);
+  transform: translateX(-250px);
 }
-#slide-card{
+#slide-card {
   animation: slide-left 0.2s linear forwards;
 }
 
@@ -135,7 +133,6 @@ body .cpf button:hover {
     transform: translateX(-250px);
   }
 }
-
 
 body .card {
   height: 210px;
@@ -245,12 +242,22 @@ body .copied span {
   padding: 4px 2px;
 }
 
-
 body .footer {
   font-size: 12px;
   text-decoration: none;
   color: #fff;
 }
 body .footer a {
-  color: #fff
+  color: #fff;
+}
+
+body .footer .icon {
+  width: 12px;
+}
+
+body .footer .buyme a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
